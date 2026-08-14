@@ -44,12 +44,83 @@
     </header>
 
     <main>
-      <section class="max-w-7xl mx-auto px-6 py-12">
-        <h1 class="text-3xl font-bold mb-2">Boutique</h1>
-        <p class="text-gray-600 dark:text-gray-400">Découvrez tous nos produits.</p>
-        <!-- Recherche, filtres, tri et grille produits viendront ici -->
-      </section>
-    </main>
+        <section class="max-w-7xl mx-auto px-6 py-12">
+            <h1 class="text-3xl font-bold mb-2">Boutique</h1>
+            <p class="text-gray-600 dark:text-gray-400 mb-8">Découvrez tous nos produits.</p>
+
+            <!-- Barre de recherche + filtres -->
+            <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <div class="relative flex-1">
+                <i data-lucide="search" class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input
+                id="search-input"
+                type="text"
+                placeholder="Rechercher un produit..."
+                class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+            </div>
+
+            <select id="category-select" class="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800">
+                <option value="">Toutes les catégories</option>
+            </select>
+
+            <select id="sort-select" class="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800">
+                <option value="">Trier par</option>
+                <option value="price-asc">Prix croissant</option>
+                <option value="price-desc">Prix décroissant</option>
+                <option value="name-asc">Nom A-Z</option>
+                <option value="name-desc">Nom Z-A</option>
+                <option value="rating-desc">Meilleure note</option>
+            </select>
+            </div>
+
+            <!-- Skeleton loader -->
+            <div id="products-skeleton" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-5 animate-pulse">
+                    <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2"></div>
+                </div>
+                <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-5 animate-pulse">
+                    <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2"></div>
+                </div>
+                <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-5 animate-pulse">
+                    <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2"></div>
+                </div>
+                <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-5 animate-pulse">
+                    <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2"></div>
+                </div>
+                </div>
+
+            <!-- Grille produits -->
+            <div id="products-grid" class="hidden grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+
+            <!-- État vide -->
+            <div id="products-empty" class="hidden text-center py-16">
+            <p class="text-lg font-medium mb-2">😕 Aucun produit trouvé.</p>
+            <p class="text-gray-500">Essayez une autre recherche.</p>
+            </div>
+
+            <!-- État erreur -->
+            <div id="products-error" class="hidden text-center py-16">
+            <p class="text-lg font-medium mb-2">❌ Impossible de charger les produits.</p>
+            <p class="text-gray-500">Vérifiez votre connexion puis réessayez.</p>
+            </div>
+
+            <!-- Charger plus -->
+            <div class="text-center mt-10">
+            <button id="load-more" class="hidden bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+                Charger plus
+            </button>
+            </div>
+        </section>
+        </main>
 
     <footer class="border-t border-gray-200 dark:border-gray-800 mt-12">
       <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-3 gap-10">

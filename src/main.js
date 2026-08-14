@@ -1,6 +1,6 @@
 import './style.css'
 import { createIcons, Menu, X, Heart, ShoppingCart, Moon, Sun, Star } from 'lucide'
-
+import { initProducts } from './products.js'
 createIcons({
   icons: { Menu, X, Heart, ShoppingCart, Moon, Sun, Star },
 })
@@ -33,3 +33,5 @@ menuToggle.addEventListener('click', () => {
   closeIcon.classList.toggle('hidden', !isHidden)
   menuToggle.setAttribute('aria-expanded', String(isHidden))
 })
+
+initProducts()
