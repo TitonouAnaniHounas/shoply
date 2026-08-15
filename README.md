@@ -2,7 +2,7 @@
 
 Boutique en ligne front-end réalisée en JavaScript vanilla, connectée à une API publique de produits. Projet de démonstration construit pour mon portfolio — aucune transaction réelle n'y est effectuée.
 
-🔗 **Démo en ligne :** [lien à venir après déploiement]
+🔗 **Démo en ligne :** https://titonouananihounas.github.io/shoply/
 
 
 ## ✨ Fonctionnalités
