@@ -15,3 +15,19 @@ export async function fetchCategories() {
   }
   return response.json()
 }
+
+export async function fetchProductById(id) {
+  const response = await fetch(`${BASE_URL}/products/${id}`)
+  if (!response.ok) {
+    throw new Error(`Erreur API : ${response.status}`)
+  }
+  return response.json()
+}
+
+export async function fetchProductsByCategory(category) {
+  const response = await fetch(`${BASE_URL}/products/category/${category}`)
+  if (!response.ok) {
+    throw new Error(`Erreur API : ${response.status}`)
+  }
+  return response.json()
+}

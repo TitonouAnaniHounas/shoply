@@ -1,5 +1,6 @@
 import { fetchProducts, fetchCategories } from './api.js'
 import { debounce, formatPrice } from './utils.js'
+import { updateFavoriteIcons } from './favorites.js'
 
 const ITEMS_PER_PAGE = 8
 
@@ -108,6 +109,7 @@ function renderGrid() {
   // Réinitialise les icônes Lucide injectées dynamiquement
   import('lucide').then(({ createIcons, Heart, Star }) => {
     createIcons({ icons: { Heart, Star }, root: grid })
+    updateFavoriteIcons()
   })
 }
 

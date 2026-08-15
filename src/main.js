@@ -1,6 +1,14 @@
 import './style.css'
 import { createIcons, Menu, X, Heart, ShoppingCart, Moon, Sun, Star } from 'lucide'
 import { initProducts } from './products.js'
+import { initHomePage } from './home.js'
+import { initProduct } from './product.js'
+import { initCartGlobal, initCartPage } from './cart.js'
+import { initFavoritesGlobal, renderFavoritesPage } from './favorites.js'
+import { initCheckoutPage } from './checkout.js'
+import { initSuccessPage } from './success.js'
+import { initOrdersPage } from './orders.js'
+
 createIcons({
   icons: { Menu, X, Heart, ShoppingCart, Moon, Sun, Star },
 })
@@ -35,3 +43,12 @@ menuToggle.addEventListener('click', () => {
 })
 
 initProducts()
+initProduct()
+initCartGlobal()
+initCartPage()
+initFavoritesGlobal()
+renderFavoritesPage()
+initCheckoutPage()
+initSuccessPage()
+initHomePage()
+initOrdersPage()
