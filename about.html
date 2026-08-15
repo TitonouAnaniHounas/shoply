@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos — Shoply</title>
+    <meta name="description" content="À propos de Shoply, contact, FAQ et informations légales." />
+    <script type="module" crossorigin src="/shoply/assets/main-C9jssF4V.js"></script>
+    <link rel="stylesheet" crossorigin href="/shoply/assets/main-B8EVyhKz.css">
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <div id="notification-container" class="fixed top-20 right-4 z-[60] flex flex-col gap-2 items-end"></div>
+
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="index.html" class="text-2xl font-bold text-blue-600">Shoply</a>
+        <ul class="hidden md:flex items-center gap-x-10 text-base font-medium">
+          <li><a href="index.html" class="hover:text-blue-600">Accueil</a></li>
+          <li><a href="products.html" class="hover:text-blue-600">Boutique</a></li>
+          <li><a href="favorites.html" class="hover:text-blue-600">Favoris</a></li>
+          <li><a href="cart.html" class="hover:text-blue-600">Panier</a></li>
+        </ul>
+        <div class="flex items-center gap-5">
+          <button id="theme-toggle" aria-label="Basculer le thème">
+            <i data-lucide="moon" class="w-5 h-5 dark:hidden" id="moon-icon"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block" id="sun-icon"></i>
+          </button>
+          <a href="favorites.html" aria-label="Favoris">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+          </a>
+          <a href="cart.html" aria-label="Panier" class="relative">
+            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+          </a>
+          <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" class="md:hidden">
+            <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="close-icon"></i>
+          </button>
+        </div>
+      </nav>
+      <ul id="mobile-menu" class="hidden md:hidden flex-col gap-2 px-6 pb-4 text-base font-medium">
+        <li><a href="index.html" class="block py-2">Accueil</a></li>
+        <li><a href="products.html" class="block py-2">Boutique</a></li>
+        <li><a href="favorites.html" class="block py-2">Favoris</a></li>
+        <li><a href="cart.html" class="block py-2">Panier</a></li>
+      </ul>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+
+      <!-- Sommaire -->
+      <nav class="flex flex-wrap gap-4 text-sm mb-12 pb-6 border-b border-gray-200 dark:border-gray-800">
+        <a href="#apropos" class="text-blue-600 hover:underline">À propos</a>
+        <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+        <a href="#faq" class="text-blue-600 hover:underline">FAQ</a>
+        <a href="#mentions-legales" class="text-blue-600 hover:underline">Mentions légales</a>
+        <a href="#confidentialite" class="text-blue-600 hover:underline">Confidentialité</a>
+      </nav>
+
+      <!-- À propos -->
+      <section id="apropos" class="scroll-mt-24 mb-16">
+        <h1 class="text-2xl font-bold mb-4">À propos de Shoply</h1>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+          Shoply est un projet de démonstration créé pour illustrer les compétences en développement frontend :
+          HTML sémantique, JavaScript vanilla, Tailwind CSS, et intégration d'API REST. C'est un projet de
+          portfolio — les produits, prix et avis proviennent d'une API publique de test (Fake Store API),
+          et aucune transaction ni aucun achat réel n'a lieu sur ce site.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="scroll-mt-24 mb-16">
+        <h2 class="text-2xl font-bold mb-4">Contact</h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+          Ce site étant un projet de démonstration, ce formulaire n'envoie rien réellement. Dans une version
+          en production, cette section contiendrait un formulaire de contact fonctionnel relié à un service
+          d'envoi d'e-mails.
+        </p>
+        <p class="text-gray-600 dark:text-gray-400">
+          Pour toute question sur ce projet en particulier, vous pouvez me retrouver sur
+          <a href="https://github.com/TitonouAnaniHounas" class="text-blue-600 hover:underline">GitHub</a> ou
+          <a href="https://wa.me/+2250151583623" class="text-blue-600 hover:underline">WhatsApp</a>.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="scroll-mt-24 mb-16">
+        <h2 class="text-2xl font-bold mb-6">Questions fréquentes</h2>
+        <div class="space-y-6">
+          <div>
+            <p class="font-semibold mb-1">Puis-je vraiment commander un produit ?</p>
+            <p class="text-gray-600 dark:text-gray-400">
+              Non, le tunnel d'achat (panier, paiement, confirmation) est entièrement simulé à des fins de
+              démonstration. Aucune transaction réelle n'est effectuée.
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">D'où viennent les produits affichés ?</p>
+            <p class="text-gray-600 dark:text-gray-400">
+              Ils proviennent de la Fake Store API, une API publique gratuite destinée aux développeurs pour
+              tester des applications e-commerce.
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">Mes favoris et mon panier sont-ils sauvegardés ?</p>
+            <p class="text-gray-600 dark:text-gray-400">
+              Oui, localement dans votre navigateur (localStorage) — ils resteront présents si vous revenez
+              plus tard, tant que vous ne videz pas les données de ce site dans votre navigateur.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mentions légales -->
+      <section id="mentions-legales" class="scroll-mt-24 mb-16">
+        <h2 class="text-2xl font-bold mb-4">Mentions légales</h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+          Shoply est un projet personnel réalisé à des fins d'apprentissage et de démonstration (portfolio).
+          Il ne s'agit pas d'une entreprise réelle et ce site n'est pas destiné à la vente. Les catalogues,
+          prix et avis produits affichés proviennent d'une API tierce de test et n'ont aucune valeur
+          commerciale réelle.
+        </p>
+      </section>
+
+      <!-- Confidentialité -->
+      <section id="confidentialite" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Politique de confidentialité</h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+          Ce site ne collecte, ne transmet, ni ne stocke aucune donnée personnelle sur un serveur. Les seules
+          données conservées (panier, favoris, historique de commandes simulées, préférence de thème) sont
+          stockées localement dans le navigateur via `localStorage`, et restent uniquement sur votre appareil.
+          Aucune information saisie dans le formulaire de commande n'est envoyée ni sauvegardée ailleurs que
+          dans votre navigateur.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="border-t border-gray-200 dark:border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-3 gap-10">
+            <div>
+            <p class="font-bold text-xl mb-3">Shoply</p>
+            <p class="text-base text-gray-500">Votre boutique en ligne de confiance.</p>
+            </div>
+            <div>
+            <p class="font-semibold text-lg mb-3">Liens utiles</p>
+            <ul class="text-base text-gray-500 space-y-2">
+                <li><a href="about.html#apropos" class="hover:text-blue-600">À propos</a></li>
+                <li><a href="about.html#contact" class="hover:text-blue-600">Contact</a></li>
+                <li><a href="about.html#faq" class="hover:text-blue-600">FAQ</a></li>
+            </ul>
+            </div>
+            <div>
+            <p class="font-semibold text-lg mb-3">Légal</p>
+            <ul class="text-base text-gray-500 space-y-2">
+                <li><a href="about.html#mentions-legales" class="hover:text-blue-600">Mentions légales</a></li>
+                <li><a href="about.html#confidentialite" class="hover:text-blue-600">Politique de confidentialité</a></li>
+            </ul>
+            </div>
+        </div>
+        <p class="text-center text-sm text-gray-400 pb-8">© 2026 Shoply</p>
+        </footer>
+
+  </body>
+</html>
